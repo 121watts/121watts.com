@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Lloyd Watkins - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --accent: #58a6ff;
+            --accent2: #f78166;
+            --text: #c9d1d9;
+            --muted: #8b949e;
+            --border: #30363d;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, rgba(88,166,255,0.1) 0%, rgba(247,129,102,0.1) 100%);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .intro p { margin-bottom: 8px; }
+        .intro p:last-child { margin-bottom: 0; }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .contact a:hover { color: var(--accent2); }
+        
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        
+        section { margin-bottom: 48px; }
+        
+        .job {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+        
+        .job:hover { border-color: var(--accent); }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        
+        .job-date {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        
+        .job-company {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        
+        .job ul {
+            margin-left: 20px;
+            color: var(--text);
+        }
+        
+        .job li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .highlight {
+            color: var(--accent2);
+            font-weight: 600;
+        }
+        
+        .nested-role {
+            border-left: 2px solid var(--border);
+            margin-left: 12px;
+            padding-left: 16px;
+            margin-top: 16px;
+        }
+        
+        .nested-role .job-title {
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 32px 16px; }
+            .contact { flex-direction: column; align-items: center; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Andrew Lloyd Watkins</h1>
+            <p class="tagline">Engineering Leader & Builder of Things</p>
+            
+            <div class="intro">
+                <p>&#x1F44B; Hey! I build teams that ship great software.</p>
+                <p>&#x1F680; From writing code to leading 10+ engineers through acquisitions &mdash; I've done the full stack of <em>people</em>.</p>
+                <p>&#x1F3AF; Zero attrition during transitions. Six months early on delivery. That's not luck, that's leadership.</p>
+                <p>&#x2615; Currently vibing at <strong>Depot</strong>. Previously leveled up at ServiceNow, EraDB, and InfluxData.</p>
+            </div>
+            
+            <div class="contact">
+                <a href="mailto:andrew.watkinz@gmail.com">andrew.watkinz@gmail.com</a>
+                <a href="https://www.linkedin.com/in/121watts/" target="_blank">linkedin.com/in/121watts</a>
+            </div>
+        </header>
+        
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Staff Software Engineer</span>
+                    <span class="job-date">Oct 2025 &ndash; Present</span>
+                </div>
+                <div class="job-company">Depot &middot; Remote</div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Senior Software Engineering Manager</span>
+                    <span class="job-date">Mar 2024 &ndash; Oct 2025</span>
+                </div>
+                <div class="job-company">ServiceNow &middot; Remote</div>
+                <ul>
+                    <li><span class="highlight">Promoted in 18 months</span> after leading 10 ICs through acquisition</li>
+                    <li><span class="highlight">Zero Attrition:</span> Retained full team during transition</li>
+                    <li><span class="highlight">Early Delivery:</span> Shipped full software integration 6 months ahead of schedule</li>
+                    <li><span class="highlight">Strategic Influence:</span> Developed org-wide product vision and led cross-functional leadership offsites</li>
+                </ul>
+                
+                <div class="nested-role">
+                    <div class="job-header">
+                        <span class="job-title">Software Engineering Manager</span>
+                        <span class="job-date">Oct 2022 &ndash; Mar 2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Software Engineering Manager</span>
+                    <span class="job-date">Jan 2021 &ndash; Nov 2022</span>
+                </div>
+                <div class="job-company">EraDB &middot; Remote</div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">"Senior" Software Engineer</span>
+                    <span class="job-date">Jan 2018 &ndash; Dec 2020</span>
+                </div>
+                <div class="job-company">InfluxData</div>
+                
+                <div class="nested-role">
+                    <div class="job-header">
+                        <span class="job-title">Pretty Good Software Engineer</span>
+                        <span class="job-date">Jan 2015 &ndash; Jan 2018</span>
+                    </div>
+                    <div class="job-company" style="margin-bottom:0;">San Francisco Bay Area &middot; Remote</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
