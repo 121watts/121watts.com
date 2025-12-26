@@ -1,297 +1,436 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO -->
-    <title>Andrew Lloyd Watkins — 121watts | Engineering Leader</title>
-    <meta name="description" content="Staff Engineer at Depot. Previously led teams through acquisitions at ServiceNow, EraDB, InfluxData. I build teams where people actually want to work.">
-    <meta name="author" content="Andrew Lloyd Watkins">
-    <link rel="canonical" href="https://121watts.com">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Andrew Lloyd Watkins — 121watts">
-    <meta property="og:description" content="Engineering leader. Builder of teams. Keeper of humans.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://121watts.com">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Andrew Lloyd Watkins — 121watts">
-    <meta name="twitter:description" content="Engineering leader. Builder of teams. Keeper of humans.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="print.css" media="print">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Andrew Lloyd Watkins â€” Engineering Leader | 121WATTS</title>
+  <meta name="description" content="Staff Engineer at Depot. Previously led teams through acquisitions at ServiceNow, EraDB, InfluxData. I build teams where people actually want to work." />
+  <meta name="author" content="Andrew Lloyd Watkins" />
+  <link rel="canonical" href="https://121watts.com" />
+
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Andrew Lloyd Watkins â€” 121WATTS" />
+  <meta property="og:description" content="Engineering leader. Builder of teams. Keeper of humans." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://121watts.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Andrew Lloyd Watkins â€” 121WATTS" />
+  <meta name="twitter:description" content="Engineering leader. Builder of teams. Keeper of humans." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>â˜…</text></svg>" />
+
+  <!-- Fonts (variable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="print.css" media="print" />
+
+  <!-- JSON-LD (facts only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Lloyd Watkins",
+    "url": "https://121watts.com",
+    "email": "mailto:andrew.watkinz@gmail.com",
+    "jobTitle": "Staff Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Depot"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/121watts/",
+      "https://github.com/121watts"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-    <!-- Skip Link -->
-    <a href="#main" class="skip-link">Skip to main content</a>
-    
-    <!-- Scan Lines Overlay -->
-    <div class="scan-lines" aria-hidden="true"></div>
-    
-    <!-- Noise Texture -->
-    <div class="noise" aria-hidden="true"></div>
-    
-    <!-- Cursor Trail Canvas -->
-    <canvas id="cursor-trail" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <div class="container">
-        <!-- Header / Nav -->
-        <header class="site-header">
-            <a href="/" class="logo" aria-label="121watts home">
-                <span class="logo-bolt">⚡</span>
-                <span class="logo-text">121WATTS</span>
-            </a>
-            <nav class="header-nav" aria-label="Primary">
-                <a href="mailto:andrew.watkinz@gmail.com" class="nav-link">Email</a>
-                <a href="https://www.linkedin.com/in/121watts/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
-                <a href="https://github.com/121watts" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
-            </nav>
-        </header>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="121WATTS home">
+        <span class="brand-mark" aria-hidden="true">121</span>
+        <span class="brand-name">WATTS</span>
+      </a>
 
-        <main id="main">
-            <!-- HERO SECTION -->
-            <section class="hero">
-                <div class="hero-content">
-                    <div class="hero-name-block">
-                        <h1 class="hero-name">
-                            <span class="name-line glitch-text" data-text="ANDREW">ANDREW</span>
-                            <span class="name-line glitch-text" data-text="LLOYD">LLOYD</span>
-                            <span class="name-line glitch-text" data-text="WATKINS">WATKINS</span>
-                        </h1>
-                        <div class="hero-titles">
-                            <span class="title-line">Engineering Leader</span>
-                            <span class="title-line">Builder of Teams</span>
-                            <span class="title-line voltage-text">Keeper of Humans <span class="bolt-pulse">⚡</span></span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-sidebar">
-                        <div class="quote-block power-on">
-                            <p class="hero-quote">"I build teams where people actually want to work."</p>
-                        </div>
-                        
-                        <div class="hero-status power-on">
-                            <div class="status-row">
-                                <span class="status-label">CURRENT_POSITION:</span>
-                                <span class="status-value">Staff Engineer @ <strong>DEPOT</strong></span>
-                            </div>
-                            <div class="status-row">
-                                <span class="status-label">OUTPUT:</span>
-                                <span class="status-value watts-meter">121W</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-intro power-on">
-                    <p>Zero attrition through an acquisition? That's not luck—<em>that's giving a shit.</em></p>
-                    <p>Previously kept humans happy at <strong>ServiceNow</strong>, <strong>EraDB</strong>, and <strong>InfluxData</strong>.</p>
-                </div>
-                
-                <div class="hero-cta power-on">
-                    <a href="mailto:andrew.watkinz@gmail.com" class="btn btn-primary">
-                        <span class="btn-text">Initiate Contact</span>
-                        <span class="btn-glow"></span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/121watts/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <span class="btn-text">LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/121watts" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <span class="btn-text">GitHub</span>
-                    </a>
-                </div>
-            </section>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
 
-            <!-- EXPERIENCE SECTION - BENTO GRID -->
-            <section class="section" aria-labelledby="experience-heading">
-                <h2 id="experience-heading" class="section-title power-on">
-                    <span class="section-marker">//</span>
-                    <span>EXPERIENCE</span>
-                    <span class="section-line"></span>
-                </h2>
-                
-                <div class="bento-grid">
-                    <article class="bento-cell bento-large power-on" data-company="depot">
-                        <div class="cell-header">
-                            <span class="cell-status">● ACTIVE</span>
-                            <span class="cell-date">2025—NOW</span>
-                        </div>
-                        <h3 class="cell-title">Staff Software Engineer</h3>
-                        <p class="cell-company">DEPOT</p>
-                        <div class="cell-border"></div>
-                    </article>
-                    
-                    <article class="bento-cell bento-large power-on" data-company="servicenow">
-                        <div class="cell-header">
-                            <span class="cell-date">2022—2025</span>
-                        </div>
-                        <h3 class="cell-title">Sr. Engineering Manager</h3>
-                        <p class="cell-company">SERVICENOW</p>
-                        <div class="cell-nested">
-                            <span class="nested-title">Engineering Manager</span>
-                            <span class="nested-date">2022—2024</span>
-                        </div>
-                        <div class="cell-border"></div>
-                    </article>
-                    
-                    <article class="bento-cell bento-small power-on" data-company="eradb">
-                        <div class="cell-header">
-                            <span class="cell-date">2021—2022</span>
-                        </div>
-                        <h3 class="cell-title">Engineering Manager</h3>
-                        <p class="cell-company">ERADB</p>
-                        <div class="cell-border"></div>
-                    </article>
-                    
-                    <article class="bento-cell bento-small power-on" data-company="influxdata">
-                        <div class="cell-header">
-                            <span class="cell-date">2015—2020</span>
-                        </div>
-                        <h3 class="cell-title">"Senior" Engineer</h3>
-                        <p class="cell-company">INFLUXDATA</p>
-                        <div class="cell-nested">
-                            <span class="nested-title">Pretty Good Engineer</span>
-                            <span class="nested-date">2015—2018</span>
-                        </div>
-                        <div class="cell-border"></div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- TESTIMONIALS - TRANSMISSION LOGS -->
-            <section class="section" aria-labelledby="transmissions-heading">
-                <h2 id="transmissions-heading" class="section-title power-on">
-                    <span class="section-marker">//</span>
-                    <span>INTERCEPTED TRANSMISSIONS</span>
-                    <span class="section-line"></span>
-                </h2>
-                
-                <div class="transmissions">
-                    <blockquote class="transmission power-on">
-                        <div class="transmission-header">
-                            <span class="transmission-label">INCOMING_TRANSMISSION</span>
-                            <span class="transmission-signal">▰▰▰▰▱</span>
-                        </div>
-                        <div class="transmission-meta">
-                            <span>> SIGNAL_ID: GANDHI_NONVIOLENT_REVIEW_001</span>
-                            <span>> TIMESTAMP: [REDACTED]</span>
-                            <span>> CLEARANCE: ████████</span>
-                        </div>
-                        <div class="transmission-body">
-                            <p class="transmission-text">"Andrew's code reviews are thorough yet kind. A rare combination in any era."</p>
-                        </div>
-                        <footer class="transmission-footer">
-                            <cite class="transmission-author">— MAHATMA GANDHI</cite>
-                            <span class="transmission-role">Passive-Aggressive Resistance Pioneer</span>
-                        </footer>
-                        <div class="transmission-border"></div>
-                    </blockquote>
-                    
-                    <blockquote class="transmission power-on">
-                        <div class="transmission-header">
-                            <span class="transmission-label">INCOMING_TRANSMISSION</span>
-                            <span class="transmission-signal">▰▰▰▱▱</span>
-                        </div>
-                        <div class="transmission-meta">
-                            <span>> SIGNAL_ID: TEDDY_ROUGHRIDER_DEPLOY_026</span>
-                            <span>> TIMESTAMP: [REDACTED]</span>
-                            <span>> CLEARANCE: ████████</span>
-                        </div>
-                        <div class="transmission-body">
-                            <p class="transmission-text">"Bully for Watts! He ships features like a Rough Rider charges San Juan Hill."</p>
-                        </div>
-                        <footer class="transmission-footer">
-                            <cite class="transmission-author">— THEODORE ROOSEVELT</cite>
-                            <span class="transmission-role">President, Bull Moose, Alleged Engineer</span>
-                        </footer>
-                        <div class="transmission-border"></div>
-                    </blockquote>
-                    
-                    <blockquote class="transmission power-on">
-                        <div class="transmission-header">
-                            <span class="transmission-label">INCOMING_TRANSMISSION</span>
-                            <span class="transmission-signal">▰▰▱▱▱</span>
-                        </div>
-                        <div class="transmission-meta">
-                            <span>> SIGNAL_ID: EDISON_PATENT_TROLL_003</span>
-                            <span>> TIMESTAMP: [REDACTED]</span>
-                            <span>> CLEARANCE: ████████</span>
-                        </div>
-                        <div class="transmission-body">
-                            <p class="transmission-text">"I have not failed. I've just found 10,000 ways that Andrew was right about the architecture."</p>
-                        </div>
-                        <footer class="transmission-footer">
-                            <cite class="transmission-author">— THOMAS EDISON</cite>
-                            <span class="transmission-role">Prolific Patent Troll</span>
-                        </footer>
-                        <div class="transmission-border"></div>
-                    </blockquote>
-                    
-                    <blockquote class="transmission power-on">
-                        <div class="transmission-header">
-                            <span class="transmission-label">INCOMING_TRANSMISSION</span>
-                            <span class="transmission-signal">▰▰▰▰▰</span>
-                        </div>
-                        <div class="transmission-meta">
-                            <span>> SIGNAL_ID: CONFUCIUS_ANCIENT_SCROLL_V2</span>
-                            <span>> TIMESTAMP: [REDACTED]</span>
-                            <span>> CLEARANCE: ████████</span>
-                        </div>
-                        <div class="transmission-body">
-                            <p class="transmission-text">"Give a man a fish, he eats for a day. Have Andrew review his PR, he becomes a better engineer forever."</p>
-                        </div>
-                        <footer class="transmission-footer">
-                            <cite class="transmission-author">— CONFUCIUS</cite>
-                            <span class="transmission-role">Ancient Philosopher, Senior Staff Advisor</span>
-                        </footer>
-                        <div class="transmission-border"></div>
-                    </blockquote>
-                </div>
-            </section>
-        </main>
-        
-        <!-- FOOTER -->
-        <footer class="site-footer power-on">
-            <div class="footer-content">
-                <p class="footer-tagline">// GROUNDING COMPLETE</p>
-                
-                <nav class="footer-links" aria-label="Footer contact links">
-                    <a href="mailto:andrew.watkinz@gmail.com" class="footer-link">
-                        <span class="link-icon">◈</span>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/121watts/" target="_blank" rel="noopener noreferrer" class="footer-link">
-                        <span class="link-icon">◈</span>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/121watts" target="_blank" rel="noopener noreferrer" class="footer-link">
-                        <span class="link-icon">◈</span>
-                        <span>GitHub</span>
-                    </a>
-                </nav>
-                
-                <p class="footer-location">Remote · Earth · Probably drinking coffee</p>
-                
-                <div class="footer-signature">
-                    <span class="signature-bolt">⚡</span>
-                    <span class="signature-text">121WATTS</span>
-                </div>
-            </div>
-        </footer>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-action="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+          <span class="icon-btn-label" aria-hidden="true">Theme</span>
+        </button>
+      </div>
     </div>
-    
-    <script src="script.js"></script>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-head power-on">
+          <p class="eyebrow">Engineering leader â€¢ builder of teams â€¢ keeper of humans</p>
+          <h1 class="hero-title" id="hero-title">
+            Andrew
+            <span class="hero-title-accent">Lloyd</span>
+            Watkins
+          </h1>
+          <p class="hero-subtitle">
+            I build teams where people actually want to work.
+          </p>
+        </div>
+
+        <div class="hero-card power-on">
+          <div class="hero-card-row">
+            <span class="meta-label">Current</span>
+            <span class="meta-value">Staff Engineer @ <strong>Depot</strong></span>
+          </div>
+          <div class="hero-card-row">
+            <span class="meta-label">Previously</span>
+            <span class="meta-value">ServiceNow â€¢ EraDB â€¢ InfluxData</span>
+          </div>
+          <div class="hero-card-row">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body power-on">
+        <p>
+          Zero attrition through an acquisition? Thatâ€™s not luckâ€”<em>thatâ€™s giving a shit.</em>
+        </p>
+        <p>
+          Previously kept humans happy at <strong>ServiceNow</strong>, <strong>EraDB</strong>, and <strong>InfluxData</strong>.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="mailto:andrew.watkinz@gmail.com">Email</a>
+          <a class="btn btn-quiet" href="https://www.linkedin.com/in/121watts/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-quiet" href="https://github.com/121watts" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <button class="btn btn-quiet" type="button" data-action="print">Print / Save as PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT STRIP -->
+    <section class="impact" aria-labelledby="impact-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="impact-title">Impact</h2>
+        <p class="section-kicker">Outcomes and priorities (no fluff).</p>
+      </div>
+
+      <ul class="impact-strip power-on">
+        <li class="impact-chip">Zero-attrition acquisition experience</li>
+        <li class="impact-chip">Teams where people actually want to work</li>
+        <li class="impact-chip">Engineering leadership + shipping mindset</li>
+        <li class="impact-chip">Kind, thorough reviews and high standards</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="experience-title">Experience</h2>
+        <p class="section-kicker">Expandable details. Fast to scan, easy to go deep.</p>
+      </div>
+
+      <div class="experience-list">
+        <details class="role power-on" name="roles">
+          <summary class="role-summary">
+            <span class="role-title">Staff Software Engineer</span>
+            <span class="role-org">Depot</span>
+            <span class="role-dates">2025â€”Now</span>
+          </summary>
+          <div class="role-body">
+            <div class="role-grid">
+              <div>
+                <h3 class="role-h">Scope</h3>
+                <p class="role-p">[Add scope: team/area, mission, what you own end-to-end.]</p>
+
+                <h3 class="role-h">Highlights</h3>
+                <ul class="role-bullets">
+                  <li>[Add 3â€“6 outcome bullets. Use outcomes you can stand behind (no invented metrics).]</li>
+                  <li>[Add a people-first leadership bullet.]</li>
+                  <li>[Add a systems/architecture bullet.]</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="role-h">Tech</h3>
+                <p class="role-p">[Add technologies, platforms, and domains.]</p>
+
+                <h3 class="role-h">Leadership</h3>
+                <ul class="role-bullets">
+                  <li>[Add coaching, hiring, process, or cross-team alignment examples.]</li>
+                  <li>[Add a â€œhow you leadâ€ highlight.]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="role power-on" name="roles">
+          <summary class="role-summary">
+            <span class="role-title">Sr. Engineering Manager</span>
+            <span class="role-org">ServiceNow</span>
+            <span class="role-dates">2022â€”2025</span>
+          </summary>
+          <div class="role-body">
+            <p class="role-subrole">Also: Engineering Manager (2022â€”2024)</p>
+            <div class="role-grid">
+              <div>
+                <h3 class="role-h">Scope</h3>
+                <p class="role-p">Led teams through acquisitions. Focus: delivery + retention + team health.</p>
+
+                <h3 class="role-h">Highlights</h3>
+                <ul class="role-bullets">
+                  <li>Led teams through acquisitions with a strong â€œkeep the humans happyâ€ posture.</li>
+                  <li>[Add 2â€“5 more specifics: org size, products, operational wins.]</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="role-h">Tech</h3>
+                <p class="role-p">[Add stack if you want it on the resume site.]</p>
+
+                <h3 class="role-h">Leadership</h3>
+                <ul class="role-bullets">
+                  <li>Built a culture of kind, thorough feedback.</li>
+                  <li>[Add hiring/coaching/career ladders/process work.]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="role power-on" name="roles">
+          <summary class="role-summary">
+            <span class="role-title">Engineering Manager</span>
+            <span class="role-org">EraDB</span>
+            <span class="role-dates">2021â€”2022</span>
+          </summary>
+          <div class="role-body">
+            <div class="role-grid">
+              <div>
+                <h3 class="role-h">Scope</h3>
+                <p class="role-p">[Add scope: team, product area, and core responsibilities.]</p>
+
+                <h3 class="role-h">Highlights</h3>
+                <ul class="role-bullets">
+                  <li>[Add 3â€“6 bullets.]</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="role-h">Tech</h3>
+                <p class="role-p">[Add technologies and domains.]</p>
+
+                <h3 class="role-h">Leadership</h3>
+                <ul class="role-bullets">
+                  <li>[Add 2â€“4 people/process/cross-team bullets.]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="role power-on" name="roles">
+          <summary class="role-summary">
+            <span class="role-title">â€œSeniorâ€ Engineer</span>
+            <span class="role-org">InfluxData</span>
+            <span class="role-dates">2015â€”2020</span>
+          </summary>
+          <div class="role-body">
+            <p class="role-subrole">Also: Pretty Good Engineer (2015â€”2018)</p>
+            <div class="role-grid">
+              <div>
+                <h3 class="role-h">Scope</h3>
+                <p class="role-p">[Add scope: products, systems, and core ownership.]</p>
+
+                <h3 class="role-h">Highlights</h3>
+                <ul class="role-bullets">
+                  <li>[Add 3â€“6 bullets.]</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="role-h">Tech</h3>
+                <p class="role-p">[Add languages, infra, databases, and tooling.]</p>
+
+                <h3 class="role-h">Leadership</h3>
+                <ul class="role-bullets">
+                  <li>[Add mentoring/review/architecture influence.]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <p class="note power-on">Tip: keep this section brutally specific over timeâ€”swap placeholders for real outcomes as you collect them.</p>
+    </section>
+
+    <!-- SELECTED WORK / CASE STUDIES -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="work-title">Selected Work</h2>
+        <p class="section-kicker">Case studies (placeholders until you add real projects here).</p>
+      </div>
+
+      <div class="cards power-on">
+        <article class="card">
+          <h3 class="card-title">[Case Study Placeholder]</h3>
+          <p class="card-meta">Problem â†’ Approach â†’ Result</p>
+          <p class="card-body">[Add a real project when ready. Keep it short and outcome-based.]</p>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Tech]</span>
+            <span class="tag is-placeholder">[Domain]</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">[Case Study Placeholder]</h3>
+          <p class="card-meta">What you built â€¢ Why it mattered</p>
+          <p class="card-body">[Add another case study. Avoid buzzwords. Be concrete.]</p>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Tech]</span>
+            <span class="tag is-placeholder">[Impact]</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">[Case Study Placeholder]</h3>
+          <p class="card-meta">Leadership â€¢ systems â€¢ product</p>
+          <p class="card-body">[Add a third if you want. Two is enough if theyâ€™re strong.]</p>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Stack]</span>
+            <span class="tag is-placeholder">[Team]</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="skills-title">Skills</h2>
+        <p class="section-kicker">Grouped tags. No cheesy meters.</p>
+      </div>
+
+      <div class="skills power-on">
+        <section class="skill-group" aria-label="Leadership">
+          <h3 class="skill-title">Leadership</h3>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Coaching]</span>
+            <span class="tag is-placeholder">[Hiring]</span>
+            <span class="tag is-placeholder">[Org design]</span>
+            <span class="tag is-placeholder">[Delivery]</span>
+          </div>
+        </section>
+
+        <section class="skill-group" aria-label="Engineering">
+          <h3 class="skill-title">Engineering</h3>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Architecture]</span>
+            <span class="tag is-placeholder">[Reviews]</span>
+            <span class="tag is-placeholder">[Reliability]</span>
+            <span class="tag is-placeholder">[Performance]</span>
+          </div>
+        </section>
+
+        <section class="skill-group" aria-label="Tools and Technologies">
+          <h3 class="skill-title">Tech</h3>
+          <div class="tag-row">
+            <span class="tag is-placeholder">[Languages]</span>
+            <span class="tag is-placeholder">[Infra]</span>
+            <span class="tag is-placeholder">[Data]</span>
+            <span class="tag is-placeholder">[Cloud]</span>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- WRITING / TALKS / OSS (Optional) -->
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="writing-title">Writing / Talks / OSS</h2>
+        <p class="section-kicker">Optionalâ€”add what youâ€™re proud of.</p>
+      </div>
+
+      <div class="cards power-on">
+        <article class="card">
+          <h3 class="card-title">[Writing Placeholder]</h3>
+          <p class="card-meta">[Publication â€¢ Year]</p>
+          <p class="card-body">[Add a link when you have one.]</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">[Talk Placeholder]</h3>
+          <p class="card-meta">[Conference â€¢ Year]</p>
+          <p class="card-body">[Add a recording or slides.]</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">[Open Source Placeholder]</h3>
+          <p class="card-meta">[Repo]</p>
+          <p class="card-body">[Add what you maintain or meaningful contributions.]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section-head power-on">
+        <h2 class="section-title" id="contact-title">Contact</h2>
+        <p class="section-kicker">Fast actions. No friction.</p>
+      </div>
+
+      <div class="contact power-on">
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="meta-label">Email</span>
+            <a class="contact-link" href="mailto:andrew.watkinz@gmail.com">andrew.watkinz@gmail.com</a>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn" type="button" data-action="copy-email" data-email="andrew.watkinz@gmail.com">Copy email</button>
+            <a class="btn btn-quiet" href="https://www.linkedin.com/in/121watts/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-quiet" href="https://github.com/121watts" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-quiet" href="#" aria-disabled="true">Calendar (placeholder)</a>
+            <button class="btn btn-quiet" type="button" data-action="print">Print / Save as PDF</button>
+          </div>
+
+          <p class="note">If youâ€™re building something ambitious and want a leader who cares about the humans and the work, Iâ€™m easy to reach.</p>
+        </div>
+      </div>
+
+      <p class="sr-live" aria-live="polite" aria-atomic="true" id="live-region"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner power-on">
+      <p class="footer-small">121WATTS â€¢ Grounded â€¢ Ready</p>
+      <p class="footer-small">Remote Â· Earth Â· Probably drinking coffee</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
