@@ -1,308 +1,85 @@
-/**
- * 121watts.com — Print Styles
- * Clean, ink-friendly version for printing
- */
+﻿/* =========================================================
+   Print stylesheet â€” clean, ink-friendly
+   ========================================================= */
 
 @media print {
-  /* Reset colors for print */
-  :root {
-    --color-void: #ffffff;
-    --color-surface: #ffffff;
-    --color-border: #dddddd;
-    --color-text: #1a1a1a;
-    --color-text-muted: #666666;
-    --color-text-dim: #888888;
-    --color-electric: #1a1a1a;
-  }
-
-  /* Hide non-essential elements */
-  .scan-lines,
-  .noise,
-  #cursor-trail,
-  .skip-link,
-  .cell-border,
-  .transmission-border,
-  .btn-glow {
-    display: none !important;
-  }
-
-  /* Reset all animations */
+  /* Kill motion */
   *, *::before, *::after {
     animation: none !important;
     transition: none !important;
   }
 
-  .power-on {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
+  @page {
+    size: letter;
+    margin: 0.6in;
   }
 
-  .glitch-text::before,
-  .glitch-text::after {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide non-essential UI */
+  .site-header,
+  .skip-link,
+  .icon-btn,
+  .cta-row .btn-quiet,
+  .cta-row [data-action="copy-email"],
+  .noscript {
     display: none !important;
   }
 
-  /* Page setup */
-  @page {
-    margin: 0.6in;
-    size: letter;
-  }
-
-  body {
-    font-size: 10pt;
-    line-height: 1.5;
-    background: white !important;
-    color: black !important;
+  #main {
+    padding: 0 !important;
   }
 
   .container {
-    max-width: 100%;
-    padding: 0;
+    max-width: none !important;
+    padding: 0 !important;
   }
 
-  /* Header */
-  .site-header {
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+  /* Reduce decorative effects */
+  .hero-card,
+  .role,
+  .card,
+  .skill,
+  .contact-card {
+    box-shadow: none !important;
+    background: transparent !important;
   }
 
-  .logo-bolt {
-    filter: none;
+  .role,
+  .card,
+  .skill,
+  .contact-card {
+    border: 1px solid #dddddd !important;
   }
 
-  .nav-link::after {
-    display: none;
+  a {
+    text-decoration: underline;
+    text-decoration-color: #000;
   }
 
-  /* Hero adjustments */
-  .hero {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+  .hero-title {
+    font-size: 22pt !important;
   }
 
-  .hero-content {
-    display: block;
+  .hero-subtitle {
+    font-size: 11pt !important;
   }
 
-  .hero-name {
-    margin-bottom: 0.5rem;
-  }
-
-  .name-line {
-    font-size: 22pt;
-    color: black;
-    line-height: 1.1;
-  }
-
-  .hero-titles {
-    margin-bottom: 0.5rem;
-  }
-
-  .title-line {
-    color: #444;
-    font-size: 9pt;
-  }
-
-  .voltage-text {
-    color: #444;
-  }
-
-  .bolt-pulse {
-    filter: none;
-  }
-
-  .hero-sidebar {
-    display: none; /* Hide sidebar quote in print */
-  }
-
-  .hero-intro {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-intro p {
-    color: #333;
-    font-size: 10pt;
-  }
-
-  .hero-intro em {
-    color: #333;
-    font-style: italic;
-  }
-
-  .hero-cta {
-    margin-top: 0.5rem;
-    gap: 1rem;
-  }
-
-  .btn {
-    background: none !important;
-    border: none !important;
-    padding: 0;
-    color: #444 !important;
-    font-size: 9pt;
-    text-transform: none;
-    letter-spacing: normal;
-  }
-
-  /* Section titles */
   .section {
-    margin-bottom: 1rem;
     page-break-inside: avoid;
   }
 
-  .section-title {
-    font-size: 11pt;
-    margin-bottom: 0.5rem;
-    color: #333;
-    page-break-after: avoid;
-  }
-
-  .section-marker {
-    color: #666;
-  }
-
-  .section-line {
-    display: none;
-  }
-
-  /* Bento Grid - linearize for print */
-  .bento-grid {
-    display: block;
-  }
-
-  .bento-cell {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #eee;
-    padding: 0.5rem 0;
-    margin-bottom: 0;
-    page-break-inside: avoid;
-  }
-
-  .bento-cell:last-child {
-    border-bottom: none;
-  }
-
-  .cell-header {
-    margin-bottom: 0.25rem;
-  }
-
-  .cell-status {
-    color: #666;
-    animation: none;
-  }
-
-  .cell-date {
-    color: #666;
-  }
-
-  .cell-title {
-    font-size: 11pt;
-    margin-bottom: 0.1rem;
-  }
-
-  .cell-company {
-    color: #444;
-    font-size: 9pt;
-  }
-
-  .cell-nested {
-    margin-top: 0.25rem;
-    padding-top: 0.25rem;
-    border-top: none;
-  }
-
-  /* Transmissions - print friendly */
-  .transmissions {
-    gap: 0.5rem;
-  }
-
-  .transmission {
-    background: none;
-    border: none;
-    border-left: 2px solid #ccc;
-    padding: 0.5rem 0 0.5rem 0.75rem;
-    page-break-inside: avoid;
-  }
-
-  .transmission-header {
-    display: none; /* Hide the "INCOMING TRANSMISSION" header */
-  }
-
-  .transmission-meta {
-    display: none; /* Hide the fake metadata */
-  }
-
-  .transmission-text {
-    font-size: 10pt;
-    color: #333;
-  }
-
-  .transmission-author {
-    font-size: 9pt;
-    color: #444;
-  }
-
-  .transmission-role {
-    font-size: 8pt;
-    color: #666;
+  /* Ensure reveals are visible */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   /* Footer */
   .site-footer {
-    padding-top: 1rem;
-    margin-top: 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  .footer-tagline {
-    display: none;
-  }
-
-  .footer-links {
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-link {
-    color: #444;
-    font-size: 9pt;
-  }
-
-  .link-icon {
-    display: none;
-  }
-
-  .footer-location {
-    font-size: 8pt;
-    color: #666;
-  }
-
-  .footer-signature {
-    display: none;
-  }
-
-  /* Links - show URLs */
-  a[href^="http"]::after,
-  a[href^="mailto"]::after {
-    content: " (" attr(href) ")";
-    font-size: 7pt;
-    color: #888;
-    word-break: break-all;
-  }
-
-  /* Don't show URL for nav/footer links */
-  .nav-link::after,
-  .btn::after,
-  .footer-link::after,
-  .logo::after {
-    content: none !important;
+    border-top: 1px solid #dddddd !important;
   }
 }

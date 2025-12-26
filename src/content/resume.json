@@ -1,0 +1,206 @@
+﻿{
+  "meta": {
+    "name": "Andrew Lloyd Watkins",
+    "role": "Engineering Leader",
+    "valueStatement": "I build teams where people actually want to work.",
+    "location": "Remote",
+    "timezone": "",
+    "siteTitle": "Andrew Lloyd Watkins - Engineering Leader",
+    "description": "Staff Engineer at Depot. Previously led teams through acquisitions at ServiceNow, EraDB, InfluxData. I build teams where people actually want to work."
+  },
+  "brand": {
+    "mark": "121",
+    "name": "WATTS"
+  },
+  "ui": {
+    "buttons": {
+      "theme": "Theme",
+      "copyEmail": "Copy email",
+      "print": "Print"
+    },
+    "labels": {
+      "role": "Role",
+      "current": "Current",
+      "previously": "Previously",
+      "location": "Location",
+      "email": "Email"
+    },
+    "announcements": {
+      "emailCopied": "Email copied.",
+      "emailCopyFailed": "Could not copy email."
+    },
+    "a11y": {
+      "skipToContent": "Skip to content"
+    }
+  },
+  "sections": {
+    "experience": {
+      "title": "Experience",
+      "kicker": "Scan first. Expand for context, scope, and leadership.",
+      "note": "Tip: keep this section brutally specific over time - swap placeholders for real outcomes as you collect them.",
+      "headings": {
+        "scope": "Scope",
+        "highlights": "Highlights",
+        "tech": "Tech",
+        "leadership": "Leadership"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "kicker": "Highly scannable. Tight summaries. Clear stacks."
+    },
+    "skills": {
+      "title": "Skills",
+      "kicker": "Grouped tags. No nonsense."
+    },
+    "writing": {
+      "title": "Writing / Talks / OSS",
+      "kicker": "Optional - add what you're proud of."
+    },
+    "contact": {
+      "title": "Contact",
+      "kicker": "Fast actions. No friction."
+    }
+  },
+  "contact": {
+    "email": "andrew.watkinz@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/121watts/",
+    "github": "https://github.com/121watts"
+  },
+  "nav": [
+    { "id": "experience", "label": "Experience" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "writing", "label": "Writing" },
+    { "id": "contact", "label": "Contact" }
+  ],
+  "hero": {
+    "eyebrow": [
+      "Engineering leader",
+      "builder of teams",
+      "keeper of humans"
+    ],
+    "intro": [
+      "Zero attrition through an acquisition? That's not luck - it's giving a shit.",
+      "Previously kept humans happy at ServiceNow, EraDB, and InfluxData."
+    ],
+    "current": "Staff Engineer @ Depot",
+    "previous": ["ServiceNow", "EraDB", "InfluxData"],
+    "cta": {
+      "primary": { "label": "Email", "href": "mailto:andrew.watkinz@gmail.com" },
+      "secondary": [
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/in/121watts/" },
+        { "label": "GitHub", "href": "https://github.com/121watts" }
+      ]
+    }
+  },
+  "impact": {
+    "title": "Impact",
+    "kicker": "Outcomes and priorities (no fluff).",
+    "items": [
+      "Zero-attrition acquisition experience",
+      "Teams where people actually want to work",
+      "Engineering leadership + shipping mindset",
+      "Kind, thorough reviews and high standards"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Depot",
+      "title": "Staff Software Engineer",
+      "dates": { "start": "2025", "end": "Now" },
+      "scope": "[Add scope: team/area, mission, what you own end-to-end.]",
+      "highlights": [
+        "[Add 3-6 outcome bullets. Use outcomes you can stand behind (no invented metrics).]",
+        "[Add a people-first leadership bullet.]",
+        "[Add a systems/architecture bullet.]"
+      ],
+      "tech": "[Add technologies, platforms, and domains.]",
+      "leadership": [
+        "[Add coaching, hiring, process, or cross-team alignment examples.]",
+        "[Add a 'how you lead' highlight.]"
+      ]
+    },
+    {
+      "company": "ServiceNow",
+      "title": "Sr. Engineering Manager",
+      "dates": { "start": "2022", "end": "2025" },
+      "subtitle": "Also: Engineering Manager (2022-2024)",
+      "scope": "Led teams through acquisitions. Focus: delivery + retention + team health.",
+      "highlights": [
+        "Led teams through acquisitions with a strong 'keep the humans happy' posture.",
+        "[Add 2-5 more specifics: org size, products, operational wins.]"
+      ],
+      "tech": "[Add stack if you want it on the resume site.]",
+      "leadership": [
+        "Built a culture of kind, thorough feedback.",
+        "[Add hiring/coaching/career ladders/process work.]"
+      ]
+    },
+    {
+      "company": "EraDB",
+      "title": "Engineering Manager",
+      "dates": { "start": "2021", "end": "2022" },
+      "scope": "[Add scope: team, product area, and core responsibilities.]",
+      "highlights": ["[Add 3-6 bullets.]"],
+      "tech": "[Add technologies and domains.]",
+      "leadership": ["[Add 2-4 people/process/cross-team bullets.]"]
+    },
+    {
+      "company": "InfluxData",
+      "title": "Senior Engineer",
+      "dates": { "start": "2015", "end": "2020" },
+      "subtitle": "Also: Pretty Good Engineer (2015-2018)",
+      "scope": "[Add scope: products, systems, and core ownership.]",
+      "highlights": ["[Add 3-6 bullets.]"],
+      "tech": "[Add languages, infra, databases, and tooling.]",
+      "leadership": ["[Add mentoring/review/architecture influence.]"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "[Case Study Placeholder]",
+      "role": "",
+      "year": "",
+      "summary": "[Add a real project when ready. Keep it short and outcome-based.]",
+      "highlights": ["Problem -> Approach -> Result"],
+      "tags": ["[Tech]", "[Domain]"],
+      "links": []
+    },
+    {
+      "name": "[Case Study Placeholder]",
+      "role": "",
+      "year": "",
+      "summary": "[Add another case study. Avoid buzzwords. Be concrete.]",
+      "highlights": ["What you built -> Why it mattered"],
+      "tags": ["[Tech]", "[Impact]"],
+      "links": []
+    },
+    {
+      "name": "[Case Study Placeholder]",
+      "role": "",
+      "year": "",
+      "summary": "[Add a third if you want. Two is enough if they're strong.]",
+      "highlights": ["Leadership -> Systems -> Product"],
+      "tags": ["[Stack]", "[Team]"],
+      "links": []
+    }
+  ],
+  "skills": [
+    { "group": "Leadership", "items": ["[Coaching]", "[Hiring]", "[Org design]", "[Delivery]"] },
+    { "group": "Engineering", "items": ["[Architecture]", "[Reviews]", "[Reliability]", "[Performance]"] },
+    { "group": "Tech", "items": ["[Languages]", "[Infra]", "[Data]", "[Cloud]"] }
+  ],
+  "writing": [
+    { "title": "[Writing Placeholder]", "meta": "[Publication - Year]", "href": "" },
+    { "title": "[Talk Placeholder]", "meta": "[Conference - Year]", "href": "" },
+    { "title": "[Open Source Placeholder]", "meta": "[Repo]", "href": "" }
+  ],
+  "contactSection": {
+    "note": "If you're building something ambitious and want a leader who cares about the humans and the work, I'm easy to reach."
+  },
+  "footer": {
+    "line1": "121WATTS - Grounded - Ready",
+    "line2": "Remote - Earth - Probably drinking coffee"
+  }
+}
