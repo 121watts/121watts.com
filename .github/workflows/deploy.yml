@@ -33,7 +33,8 @@ jobs:
           mkdir -p dist/src/content
           cp index.html styles.css print.css script.js dist/
           cp src/content/resume.json dist/src/content/resume.json
-          cp .nojekyll dist/.nojekyll\n          cp CNAME dist/CNAME\n
+          cp .nojekyll dist/.nojekyll
+          cp CNAME dist/CNAME
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -42,4 +43,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
 
