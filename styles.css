@@ -531,7 +531,7 @@ html[data-theme="dark"] .skip-link { background: rgba(18,22,34,0.92); }
   overflow: clip;
 }
 
-.role summary {
+.role-summary {
   list-style: none;
   cursor: pointer;
   padding: 0.95rem 1.05rem;
@@ -543,7 +543,7 @@ html[data-theme="dark"] .skip-link { background: rgba(18,22,34,0.92); }
 .role summary::-webkit-details-marker { display: none; }
 
 @media (min-width: 720px) {
-  .role summary {
+  .role-summary {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
     gap: 1rem;
@@ -761,3 +761,4 @@ html[data-theme="dark"] .skip-link { background: rgba(18,22,34,0.92); }
 
 
 
+\n\n.role.role-static .role-summary { cursor: default; }\n

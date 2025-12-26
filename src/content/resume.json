@@ -1,137 +1,171 @@
 ﻿{
-  "meta": {
-    "name": "Andrew Lloyd Watkins",
-    "role": "Engineering Leader",
-    "valueStatement": "I build teams where people actually want to work.",
-    "location": "Remote",
-    "timezone": "",
-    "siteTitle": "Andrew Lloyd Watkins - Engineering Leader",
-    "description": "Staff Engineer at Depot. Previously led teams through acquisitions at ServiceNow, EraDB, InfluxData. I build teams where people actually want to work."
-  },
-  "brand": {
-    "mark": "121",
-    "name": "WATTS"
-  },
-  "ui": {
-    "buttons": {
-      "theme": "Theme",
-      "print": "Print"
-    },
-    "labels": {
-      "role": "Role",
-      "current": "Current",
-      "previously": "Previously",
-      "location": "Location",
-      "email": "Email"
-    },
-    "a11y": {
-      "skipToContent": "Skip to content"
-    }
-  },
-  "sections": {
-    "experience": {
-      "title": "Experience",
-      "kicker": "Scan first. Expand for context, scope, and leadership.",
-      "note": "Tip: keep this section brutally specific over time - swap placeholders for real outcomes as you collect them.",
-      "headings": {
-        "scope": "Scope",
-        "highlights": "Highlights",
-        "tech": "Tech",
-        "leadership": "Leadership"
-      }
-    },
-    "contact": {
-      "title": "Contact",
-      "kicker": "Fast actions. No friction."
-    }
-  },
-  "contact": {
-    "email": "andrew.watkinz@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/121watts/",
-    "github": "https://github.com/121watts"
-  },
-  "nav": [
-    { "id": "experience", "label": "Experience" },
-    { "id": "contact", "label": "Contact" }
-  ],
-  "hero": {
-    "eyebrow": [
-      "Engineering leader",
-      "builder of teams",
-      "keeper of humans"
-    ],
-    "intro": [
-      "Zero attrition through an acquisition? That's not luck - it's giving a shit.",
-      "Previously kept humans happy at ServiceNow, EraDB, and InfluxData."
-    ],
-    "current": "Staff Engineer @ Depot",
-    "previous": ["ServiceNow", "EraDB", "InfluxData"],
-    "cta": {
-      "primary": { "label": "Email", "href": "mailto:andrew.watkinz@gmail.com" },
-      "secondary": [
-        { "label": "LinkedIn", "href": "https://www.linkedin.com/in/121watts/" },
-        { "label": "GitHub", "href": "https://github.com/121watts" }
-      ]
-    }
-  },
-  "experience": [
-    {
-      "company": "Depot",
-      "title": "Staff Software Engineer",
-      "dates": { "start": "2025", "end": "Now" },
-      "scope": "[Add scope: team/area, mission, what you own end-to-end.]",
-      "highlights": [
-        "[Add 3-6 outcome bullets. Use outcomes you can stand behind (no invented metrics).]",
-        "[Add a people-first leadership bullet.]",
-        "[Add a systems/architecture bullet.]"
-      ],
-      "tech": "[Add technologies, platforms, and domains.]",
-      "leadership": [
-        "[Add coaching, hiring, process, or cross-team alignment examples.]",
-        "[Add a 'how you lead' highlight.]"
-      ]
-    },
-    {
-      "company": "ServiceNow",
-      "title": "Sr. Engineering Manager",
-      "dates": { "start": "2022", "end": "2025" },
-      "subtitle": "Also: Engineering Manager (2022-2024)",
-      "scope": "Led teams through acquisitions. Focus: delivery + retention + team health.",
-      "highlights": [
-        "Led teams through acquisitions with a strong 'keep the humans happy' posture.",
-        "[Add 2-5 more specifics: org size, products, operational wins.]"
-      ],
-      "tech": "[Add stack if you want it on the resume site.]",
-      "leadership": [
-        "Built a culture of kind, thorough feedback.",
-        "[Add hiring/coaching/career ladders/process work.]"
-      ]
-    },
-    {
-      "company": "EraDB",
-      "title": "Engineering Manager",
-      "dates": { "start": "2021", "end": "2022" },
-      "scope": "[Add scope: team, product area, and core responsibilities.]",
-      "highlights": ["[Add 3-6 bullets.]"],
-      "tech": "[Add technologies and domains.]",
-      "leadership": ["[Add 2-4 people/process/cross-team bullets.]"]
-    },
-    {
-      "company": "InfluxData",
-      "title": "Senior Engineer",
-      "dates": { "start": "2015", "end": "2020" },
-      "subtitle": "Also: Pretty Good Engineer (2015-2018)",
-      "scope": "[Add scope: products, systems, and core ownership.]",
-      "highlights": ["[Add 3-6 bullets.]"],
-      "tech": "[Add languages, infra, databases, and tooling.]",
-      "leadership": ["[Add mentoring/review/architecture influence.]"]
-    }
-  ],
-  "contactSection": {
-    "note": "If you're building something ambitious and want a leader who cares about the humans and the work, I'm easy to reach."
-  },
-  "footer": {
-    "line1": "121WATTS - Grounded - Ready",
-    "line2": "Remote - Earth - Probably drinking coffee"
-  }
+    "meta":  {
+                 "name":  "Andrew Lloyd Watkins",
+                 "role":  "Engineering Leader",
+                 "valueStatement":  "I build teams where people actually want to work.",
+                 "location":  "Remote",
+                 "timezone":  "",
+                 "siteTitle":  "Andrew Lloyd Watkins - Engineering Leader",
+                 "description":  "Staff Engineer at Depot. Previously led teams through acquisitions at ServiceNow, EraDB, InfluxData. I build teams where people actually want to work."
+             },
+    "brand":  {
+                  "mark":  "121",
+                  "name":  "WATTS"
+              },
+    "ui":  {
+               "buttons":  {
+                               "theme":  "Theme",
+                               "print":  "Print"
+                           },
+               "labels":  {
+                              "role":  "Role",
+                              "current":  "Current",
+                              "previously":  "Previously",
+                              "location":  "Location",
+                              "email":  "Email"
+                          },
+               "a11y":  {
+                            "skipToContent":  "Skip to content"
+                        }
+           },
+    "sections":  {
+                     "experience":  {
+                                        "title":  "Experience",
+                                        "kicker":  "Scan first. Expand for context, scope, and leadership.",
+                                        "note":  "Tip: keep this section brutally specific over time - swap placeholders for real outcomes as you collect them.",
+                                        "headings":  {
+                                                         "scope":  "Scope",
+                                                         "highlights":  "Highlights",
+                                                         "tech":  "Tech",
+                                                         "leadership":  "Leadership"
+                                                     }
+                                    },
+                     "contact":  {
+                                     "title":  "Contact",
+                                     "kicker":  "Fast actions. No friction."
+                                 }
+                 },
+    "contact":  {
+                    "email":  "andrew.watkinz@gmail.com",
+                    "linkedin":  "https://www.linkedin.com/in/121watts/",
+                    "github":  "https://github.com/121watts"
+                },
+    "nav":  [
+                {
+                    "id":  "experience",
+                    "label":  "Experience"
+                },
+                {
+                    "id":  "contact",
+                    "label":  "Contact"
+                }
+            ],
+    "hero":  {
+                 "eyebrow":  [
+                                 "Engineering leader",
+                                 "builder of teams",
+                                 "keeper of humans"
+                             ],
+                 "intro":  [
+                               "Zero attrition through an acquisition? That\u0027s not luck - it\u0027s giving a shit.",
+                               "Previously kept humans happy at ServiceNow, EraDB, and InfluxData."
+                           ],
+                 "current":  "Staff Engineer @ Depot",
+                 "previous":  [
+                                  "ServiceNow",
+                                  "EraDB",
+                                  "InfluxData"
+                              ],
+                 "cta":  {
+                             "primary":  {
+                                             "label":  "Email",
+                                             "href":  "mailto:andrew.watkinz@gmail.com"
+                                         },
+                             "secondary":  [
+                                               {
+                                                   "label":  "LinkedIn",
+                                                   "href":  "https://www.linkedin.com/in/121watts/"
+                                               },
+                                               {
+                                                   "label":  "GitHub",
+                                                   "href":  "https://github.com/121watts"
+                                               }
+                                           ]
+                         }
+             },
+    "experience":  [
+                       {
+                           "company":  "Depot",
+                           "title":  "Staff Software Engineer",
+                           "dates":  {
+                                         "start":  "2025",
+                                         "end":  "Now"
+                                     },
+                           "scope":  "",
+                           "highlights":  [
+
+                                          ],
+                           "tech":  "",
+                           "leadership":  [
+
+                                          ]
+                       },
+                       {
+                           "company":  "ServiceNow",
+                           "title":  "Sr. Engineering Manager",
+                           "dates":  {
+                                         "start":  "2022",
+                                         "end":  "2025"
+                                     },
+                           "subtitle":  "Also: Engineering Manager (2022-2024)",
+                           "scope":  "Led teams through acquisitions. Focus: delivery + retention + team health.",
+                           "highlights":  [
+                                              "Led teams through acquisitions with a strong \u0027keep the humans happy\u0027 posture."
+                                          ],
+                           "tech":  "",
+                           "leadership":  [
+                                              "Built a culture of kind, thorough feedback."
+                                          ]
+                       },
+                       {
+                           "company":  "EraDB",
+                           "title":  "Engineering Manager",
+                           "dates":  {
+                                         "start":  "2021",
+                                         "end":  "2022"
+                                     },
+                           "scope":  "",
+                           "highlights":  [
+
+                                          ],
+                           "tech":  "",
+                           "leadership":  [
+
+                                          ]
+                       },
+                       {
+                           "company":  "InfluxData",
+                           "title":  "Senior Engineer",
+                           "dates":  {
+                                         "start":  "2015",
+                                         "end":  "2020"
+                                     },
+                           "subtitle":  "Also: Pretty Good Engineer (2015-2018)",
+                           "scope":  "",
+                           "highlights":  [
+
+                                          ],
+                           "tech":  "",
+                           "leadership":  [
+
+                                          ]
+                       }
+                   ],
+    "contactSection":  {
+                           "note":  "If you\u0027re building something ambitious and want a leader who cares about the humans and the work, I\u0027m easy to reach."
+                       },
+    "footer":  {
+                   "line1":  "121WATTS - Grounded - Ready",
+                   "line2":  "Remote - Earth - Probably drinking coffee"
+               }
 }

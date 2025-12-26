@@ -37,6 +37,25 @@ function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+function isBracketPlaceholder(value) {
+  return typeof value === 'string' && /^\s*\[.*\]\s*$/.test(value);
+}
+
+function cleanText(value) {
+  if (typeof value !== 'string') return '';
+  const t = value.trim();
+  if (!t) return '';
+  if (isBracketPlaceholder(t)) return '';
+  return t;
+}
+
+function cleanList(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((v) => (typeof v === 'string' ? v.trim() : ''))
+    .filter(Boolean)
+    .filter((v) => !isBracketPlaceholder(v));
+}
 function safeText(value, fallback = '') {
   return typeof value === 'string' && value.length ? value : fallback;
 }
@@ -251,31 +270,64 @@ function renderExperience(data) {
   const sec = getSections(data).experience ?? {};
   const headings = sec.headings ?? {};
 
-  const list = el('div', { class: 'roles' }, roles.map((r, idx) => {
-    return el('details', { class: 'role reveal', ...(idx === 0 ? { open: '' } : {}) }, [
-      el('summary', {}, [
-        el('div', {}, [
-          el('span', { class: 'role-title', text: r.title || '' }),
-          document.createTextNode(' '),
-          el('span', { class: 'role-company', text: r.company || '' })
-        ]),
-        el('span', { class: 'role-dates', text: formatDates(r.dates) })
+  let openedFirst = false;
+
+  const list = el('div', { class: 'roles' }, roles.map((r) => {
+    const scope = cleanText(r.scope);
+    const tech = cleanText(r.tech);
+    const highlights = cleanList(r.highlights);
+    const leadership = cleanList(r.leadership);
+
+    const hasBody = Boolean(scope || tech || highlights.length || leadership.length);
+
+    const header = el('div', { class: 'role-summary' }, [
+      el('div', {}, [
+        el('span', { class: 'role-title', text: r.title || '' }),
+        document.createTextNode(' '),
+        el('span', { class: 'role-company', text: r.company || '' })
       ]),
-      ...(r.subtitle ? [el('p', { class: 'role-subtitle', text: r.subtitle })] : []),
+      el('span', { class: 'role-dates', text: formatDates(r.dates) })
+    ]);
+
+    const subtitle = r.subtitle ? el('p', { class: 'role-subtitle', text: r.subtitle }) : null;
+
+    if (!hasBody) {
+      return el('article', { class: 'role role-static reveal' }, [
+        header,
+        subtitle
+      ]);
+    }
+
+    const openAttr = !openedFirst ? { open: '' } : {};
+    openedFirst = true;
+
+    const left = [];
+    if (scope) {
+      left.push(el('h3', { class: 'role-h', text: headings.scope || 'Scope' }));
+      left.push(el('p', { class: 'role-p', text: scope }));
+    }
+    if (highlights.length) {
+      left.push(el('h3', { class: 'role-h', style: 'margin-top: 0.9rem', text: headings.highlights || 'Highlights' }));
+      left.push(el('ul', { class: 'role-bullets' }, highlights.map((b) => el('li', {}, [b]))));
+    }
+
+    const right = [];
+    if (tech) {
+      right.push(el('h3', { class: 'role-h', text: headings.tech || 'Tech' }));
+      right.push(el('p', { class: 'role-p', text: tech }));
+    }
+    if (leadership.length) {
+      right.push(el('h3', { class: 'role-h', style: 'margin-top: 0.9rem', text: headings.leadership || 'Leadership' }));
+      right.push(el('ul', { class: 'role-bullets' }, leadership.map((b) => el('li', {}, [b]))));
+    }
+
+    return el('details', { class: 'role reveal', ...openAttr }, [
+      el('summary', { class: 'role-summary' }, [        el('div', {}, [          el('span', { class: 'role-title', text: r.title || '' }),          document.createTextNode(' '),          el('span', { class: 'role-company', text: r.company || '' })        ]),        el('span', { class: 'role-dates', text: formatDates(r.dates) })      ]),
+      subtitle,
       el('div', { class: 'role-body' }, [
         el('div', { class: 'role-grid' }, [
-          el('div', {}, [
-            el('h3', { class: 'role-h', text: headings.scope || 'Scope' }),
-            el('p', { class: 'role-p', text: r.scope || '' }),
-            el('h3', { class: 'role-h', style: 'margin-top: 0.9rem', text: headings.highlights || 'Highlights' }),
-            el('ul', { class: 'role-bullets' }, (Array.isArray(r.highlights) ? r.highlights : []).map((b) => el('li', {}, [b])))
-          ]),
-          el('div', {}, [
-            el('h3', { class: 'role-h', text: headings.tech || 'Tech' }),
-            el('p', { class: 'role-p', text: r.tech || '' }),
-            el('h3', { class: 'role-h', style: 'margin-top: 0.9rem', text: headings.leadership || 'Leadership' }),
-            el('ul', { class: 'role-bullets' }, (Array.isArray(r.leadership) ? r.leadership : []).map((b) => el('li', {}, [b])))
-          ])
+          el('div', {}, left),
+          el('div', {}, right)
         ])
       ])
     ]);
@@ -494,3 +546,5 @@ if (document.readyState === 'loading') {
 } else {
   main();
 }
+
+
