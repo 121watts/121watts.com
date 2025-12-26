@@ -6,39 +6,54 @@
 @media print {
   /* Reset colors for print */
   :root {
-    --color-bg: #ffffff;
+    --color-void: #ffffff;
     --color-surface: #ffffff;
     --color-border: #dddddd;
     --color-text: #1a1a1a;
-    --color-text-heading: #000000;
     --color-text-muted: #666666;
-    --color-accent-primary: #1a1a1a;
-    --color-accent-secondary: #444444;
+    --color-text-dim: #888888;
+    --color-electric: #1a1a1a;
   }
 
   /* Hide non-essential elements */
-  .bg-gradient,
-  .skip-link {
+  .scan-lines,
+  .noise,
+  #cursor-trail,
+  .skip-link,
+  .cell-border,
+  .transmission-border,
+  .btn-glow {
     display: none !important;
   }
 
-  /* Reset animations */
-  .reveal {
+  /* Reset all animations */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .power-on {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    display: none !important;
   }
 
   /* Page setup */
   @page {
-    margin: 0.75in;
+    margin: 0.6in;
     size: letter;
   }
 
   body {
-    font-size: 11pt;
+    font-size: 10pt;
     line-height: 1.5;
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
   }
 
   .container {
@@ -46,30 +61,61 @@
     padding: 0;
   }
 
+  /* Header */
+  .site-header {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo-bolt {
+    filter: none;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
   /* Hero adjustments */
   .hero {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #ddd;
-    text-align: left;
   }
 
-  .hero-greeting {
-    display: none;
+  .hero-content {
+    display: block;
   }
 
   .hero-name {
-    font-size: 24pt;
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: black;
-    background-clip: unset;
-    color: black;
+    margin-bottom: 0.5rem;
   }
 
-  .hero-tagline {
-    font-size: 12pt;
+  .name-line {
+    font-size: 22pt;
+    color: black;
+    line-height: 1.1;
+  }
+
+  .hero-titles {
+    margin-bottom: 0.5rem;
+  }
+
+  .title-line {
     color: #444;
+    font-size: 9pt;
+  }
+
+  .voltage-text {
+    color: #444;
+  }
+
+  .bolt-pulse {
+    filter: none;
+  }
+
+  .hero-sidebar {
+    display: none; /* Hide sidebar quote in print */
   }
 
   .hero-intro {
@@ -79,8 +125,19 @@
     margin-bottom: 0.5rem;
   }
 
+  .hero-intro p {
+    color: #333;
+    font-size: 10pt;
+  }
+
+  .hero-intro em {
+    color: #333;
+    font-style: italic;
+  }
+
   .hero-cta {
     margin-top: 0.5rem;
+    gap: 1rem;
   }
 
   .btn {
@@ -88,95 +145,113 @@
     border: none !important;
     padding: 0;
     color: #444 !important;
-    font-size: 10pt;
-    box-shadow: none !important;
-  }
-
-  .btn svg {
-    display: none;
-  }
-
-  .btn-primary::after,
-  .btn-secondary::after {
-    content: none;
+    font-size: 9pt;
+    text-transform: none;
+    letter-spacing: normal;
   }
 
   /* Section titles */
-  .section-title {
-    font-size: 14pt;
-    margin-bottom: 0.75rem;
-    page-break-after: avoid;
-  }
-
-  .section-title::after {
-    display: none;
-  }
-
-  /* Job cards */
   .section {
     margin-bottom: 1rem;
-  }
-
-  .timeline {
-    gap: 0.5rem;
-  }
-
-  .job-card {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #eee;
-    border-radius: 0;
-    padding: 0.5rem 0;
     page-break-inside: avoid;
   }
 
-  .job-card:last-child {
+  .section-title {
+    font-size: 11pt;
+    margin-bottom: 0.5rem;
+    color: #333;
+    page-break-after: avoid;
+  }
+
+  .section-marker {
+    color: #666;
+  }
+
+  .section-line {
+    display: none;
+  }
+
+  /* Bento Grid - linearize for print */
+  .bento-grid {
+    display: block;
+  }
+
+  .bento-cell {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+    page-break-inside: avoid;
+  }
+
+  .bento-cell:last-child {
     border-bottom: none;
   }
 
-  .job-title {
+  .cell-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .cell-status {
+    color: #666;
+    animation: none;
+  }
+
+  .cell-date {
+    color: #666;
+  }
+
+  .cell-title {
     font-size: 11pt;
+    margin-bottom: 0.1rem;
   }
 
-  .job-company {
+  .cell-company {
     color: #444;
+    font-size: 9pt;
   }
 
-  .job-nested {
-    border-left: 1px solid #ccc;
+  .cell-nested {
     margin-top: 0.25rem;
     padding-top: 0.25rem;
     border-top: none;
   }
 
-  /* Testimonials - print friendly */
-  .testimonials {
+  /* Transmissions - print friendly */
+  .transmissions {
     gap: 0.5rem;
   }
 
-  .quote-card {
+  .transmission {
     background: none;
+    border: none;
     border-left: 2px solid #ccc;
-    border-radius: 0;
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 0 0.5rem 0.75rem;
     page-break-inside: avoid;
   }
 
-  .quote-card::before {
-    display: none;
+  .transmission-header {
+    display: none; /* Hide the "INCOMING TRANSMISSION" header */
   }
 
-  .quote-text {
+  .transmission-meta {
+    display: none; /* Hide the fake metadata */
+  }
+
+  .transmission-text {
     font-size: 10pt;
-    padding-right: 0;
+    color: #333;
   }
 
-  .quote-author {
-    font-size: 10pt;
-  }
-
-  .quote-role {
+  .transmission-author {
     font-size: 9pt;
+    color: #444;
+  }
+
+  .transmission-role {
+    font-size: 8pt;
+    color: #666;
   }
 
   /* Footer */
@@ -184,16 +259,16 @@
     padding-top: 1rem;
     margin-top: 1rem;
     border-top: 1px solid #ddd;
-    text-align: left;
   }
 
-  .footer-cta {
+  .footer-tagline {
     display: none;
   }
 
   .footer-links {
     justify-content: flex-start;
     gap: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .footer-link {
@@ -201,27 +276,33 @@
     font-size: 9pt;
   }
 
-  .footer-link svg {
+  .link-icon {
     display: none;
   }
 
   .footer-location {
-    font-size: 9pt;
+    font-size: 8pt;
+    color: #666;
+  }
+
+  .footer-signature {
+    display: none;
   }
 
   /* Links - show URLs */
   a[href^="http"]::after,
   a[href^="mailto"]::after {
     content: " (" attr(href) ")";
-    font-size: 8pt;
+    font-size: 7pt;
     color: #888;
     word-break: break-all;
   }
 
-  /* Don't show URL for buttons (already visible) */
+  /* Don't show URL for nav/footer links */
+  .nav-link::after,
   .btn::after,
-  .footer-link::after {
+  .footer-link::after,
+  .logo::after {
     content: none !important;
   }
 }
-
