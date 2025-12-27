@@ -1,46 +1,35 @@
 ﻿# resume-site
 
-Premium, editorial-quality single-page resume designed for GitHub Pages.
+Clean, static resume site built with Astro and Tailwind CSS.
 
 ## Edit content (single source of truth)
-All resume content lives in **one file**:
+All resume content lives in:
 - `src/content/resume.json`
 
-Edit that file (name, roles, projects, links, etc). The UI renders entirely from it.
-
 ## Run locally
-Because the site loads `resume.json`, you should preview it via a small local static server (opening `index.html` via `file://` may block `fetch`).
-
-Pick one:
-
-### Option A (VS Code)
-- Install **Live Server**
-- Right-click `index.html` â†’ **Open with Live Server**
-
-### Option B (Node)
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
-
-### Option C (Python)
-```bash
-python -m http.server 5173
-```
-
-Then open the shown URL.
 
 ## Deploy (GitHub Pages)
-This repo deploys via **GitHub Actions**:
-- Workflow: `.github/workflows/deploy.yml`
+This repo deploys automatically using **GitHub Actions**.
 
-Steps:
-1. In your GitHub repo, go to **Settings â†’ Pages**
-2. Set **Build and deployment** to **GitHub Actions**
-3. Push to `main` (or `master`) â€” the workflow will publish automatically
+### One-time setup (required)
+In your GitHub repo:
+- Go to **Settings → Pages**
+- Set **Source** to **Deploy from a branch**
+- Set **Branch** to `gh-pages` and **Folder** to `/ (root)`
 
-The site will be available at:
-- `https://121watts.github.io/<repo>/`
+Custom domain:
+- `CNAME` is committed and will be published automatically.
 
-## Notes
-- No PDF download button (per request). Use the **Print** action for â€œSave as PDFâ€.
-- Print stylesheet is in `print.css`.
+### Day-to-day workflow
+1. Make changes on a branch
+2. Open a PR and merge into `main`
+3. GitHub Actions runs on `main`, builds the site, and publishes the generated `dist/` output to the `gh-pages` branch
+4. GitHub Pages serves the site from `gh-pages`
+
+### Why `gh-pages` instead of serving directly from `main`?
+- `main` contains the **source** (Astro/Tailwind). GitHub Pages needs the **built static output**.
+- The workflow builds on `main` and publishes the static output to `gh-pages` so Pages can serve it.

@@ -1,0 +1,98 @@
+---
+type Props = {
+  meta: { name: string };
+  a11y: { skipToContent: string };
+  contact: { email: string; linkedin?: string; github?: string };
+};
+
+const { meta, a11y, contact } = Astro.props;
+---
+
+<a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:border focus:border-[rgb(var(--hairline))] focus:bg-[rgb(var(--surface-2))] focus:px-3 focus:py-2 focus:text-sm focus:text-[rgb(var(--ink))] focus:shadow"
+  href="#main"
+>
+  {a11y.skipToContent}
+</a>
+
+<header data-print="hide" class="sticky top-0 z-40">
+  <div class="backdrop-blur bg-[rgb(var(--surface)/0.82)] supports-[backdrop-filter]:bg-[rgb(var(--surface)/0.68)] border-b border-[rgb(var(--hairline)/0.8)]">
+    <div class="mx-auto max-w-[var(--content)] px-4 sm:px-6">
+      <div class="h-14 flex items-center justify-between gap-3">
+        <div class="min-w-0 flex items-center gap-2">
+          <div class="truncate">
+            <span class="font-mono text-sm sm:text-base tracking-[0.12em] text-[rgb(var(--ink)/0.92)]">
+              {meta.name}
+            </span>
+          </div>
+        </div>
+
+        <nav aria-label="Primary" class="flex items-center gap-2">
+          {contact.linkedin ? (
+            <a
+              class="rounded-xl px-2.5 py-1.5 text-sm text-[rgb(var(--muted))] hover:text-[rgb(var(--ink))] hover:bg-[rgb(var(--ink)/0.06)] transition"
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          ) : null}
+
+          {contact.github ? (
+            <a
+              class="rounded-xl px-2.5 py-1.5 text-sm text-[rgb(var(--muted))] hover:text-[rgb(var(--ink))] hover:bg-[rgb(var(--ink)/0.06)] transition"
+              href={contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          ) : null}
+
+          <button
+            class="theme-toggle inline-flex size-9 items-center justify-center rounded-full border border-[rgb(var(--hairline))] bg-[rgb(var(--surface-2))] text-[rgb(var(--ink)/0.82)] shadow-sm transition hover:text-[rgb(var(--ink))] hover:shadow cursor-pointer"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to light theme"
+            title="Toggle theme"
+          >
+            <span class="sr-only">Toggle theme</span>
+
+            <!-- Show sun in dark mode (switch to light) -->
+            <svg class="theme-icon theme-sun h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <path
+                d="M12 2.75v2.25M12 19v2.25M21.25 12h-2.25M5 12H2.75M18.54 5.46l-1.6 1.6M7.06 16.94l-1.6 1.6M18.54 18.54l-1.6-1.6M7.06 7.06l-1.6-1.6"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            <!-- Show crescent moon in light mode (switch to dark) -->
+            <svg class="theme-icon theme-moon h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <!-- cut a bite out of the moon to form a crisp crescent -->
+                <mask id="crescentMask">
+                  <rect x="0" y="0" width="24" height="24" fill="white" />
+                  <circle cx="15.5" cy="10" r="6.5" fill="black" />
+                </mask>
+              </defs>
+              <circle cx="11" cy="12" r="7" fill="currentColor" mask="url(#crescentMask)" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style is:global>
+  /* Theme icon swap */
+  .theme-icon.theme-sun { display: none; }
+  .theme-icon.theme-moon { display: inline; }
+  [data-theme='dark'] .theme-icon.theme-sun { display: inline; }
+  [data-theme='dark'] .theme-icon.theme-moon { display: none; }
+</style>
+
+

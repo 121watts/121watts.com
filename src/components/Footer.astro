@@ -1,0 +1,24 @@
+---
+type Props = {
+  line1: string;
+  line2: string;
+};
+
+const { line1, line2 } = Astro.props;
+---
+
+<footer class="pb-14">
+  <div class="mx-auto max-w-[var(--content)] px-4 sm:px-6">
+    <div class="mt-10 border-t border-[rgb(var(--hairline))] pt-6 text-sm text-[rgb(var(--muted))]">
+      <div class="flex flex-col gap-1">
+        {line1 ? <p class="font-medium text-[rgb(var(--ink))]">{line1}</p> : null}
+        {line2 ? <p>{line2}</p> : null}
+      </div>
+      <p class="mt-4 font-mono text-xs tracking-[0.18em] text-[rgb(var(--muted))] uppercase">
+        © {new Date().getFullYear()}
+      </p>
+    </div>
+  </div>
+</footer>
+
+

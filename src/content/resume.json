@@ -1,6 +1,6 @@
 ﻿{
     "meta":  {
-                 "name":  "Andrew Lloyd Watkins",
+                 "name":  "Andrew \"Watts\" Watkins",
                  "role":  "Engineering Leader",
                  "valueStatement":  "I build teams where people actually want to work.",
                  "location":  "Remote",
@@ -31,7 +31,7 @@
     "sections":  {
                      "experience":  {
                                         "title":  "Experience",
-                                        "kicker":  "Scan first. Expand for context, scope, and leadership.",
+                                        "kicker":  "",
                                         "note":  "Tip: keep this section brutally specific over time - swap placeholders for real outcomes as you collect them.",
                                         "headings":  {
                                                          "scope":  "Scope",
@@ -42,7 +42,7 @@
                                     },
                      "contact":  {
                                      "title":  "Contact",
-                                     "kicker":  "Fast actions. No friction."
+                                     "kicker":  ""
                                  }
                  },
     "contact":  {
@@ -63,11 +63,10 @@
     "hero":  {
                  "eyebrow":  [
                                  "Engineering leader",
-                                 "builder of teams",
-                                 "keeper of humans"
+                                 "Builder of teams",
+                                 "Keeper of humans"
                              ],
                  "intro":  [
-                               "Zero attrition through an acquisition? That\u0027s not luck - it\u0027s giving a shit.",
                                "Previously kept humans happy at ServiceNow, EraDB, and InfluxData."
                            ],
                  "current":  "Staff Engineer @ Depot",
@@ -118,13 +117,13 @@
                                          "end":  "2025"
                                      },
                            "subtitle":  "Also: Engineering Manager (2022-2024)",
-                           "scope":  "Led teams through acquisitions. Focus: delivery + retention + team health.",
+                           "scope":  "",
                            "highlights":  [
-                                              "Led teams through acquisitions with a strong \u0027keep the humans happy\u0027 posture."
+                                             
                                           ],
                            "tech":  "",
                            "leadership":  [
-                                              "Built a culture of kind, thorough feedback."
+                                             
                                           ]
                        },
                        {
@@ -145,12 +144,12 @@
                        },
                        {
                            "company":  "InfluxData",
-                           "title":  "Senior Engineer",
+                           "title":  "\"Pretty Good\" Engineer",
                            "dates":  {
                                          "start":  "2015",
                                          "end":  "2020"
                                      },
-                           "subtitle":  "Also: Pretty Good Engineer (2015-2018)",
+                           "subtitle":  "",
                            "scope":  "",
                            "highlights":  [
 
@@ -162,10 +161,10 @@
                        }
                    ],
     "contactSection":  {
-                           "note":  "If you\u0027re building something ambitious and want a leader who cares about the humans and the work, I\u0027m easy to reach."
+                           "note":  ""
                        },
     "footer":  {
-                   "line1":  "121WATTS - Grounded - Ready",
+                   "line1":  "121watts.com - For Your Enjoyment",
                    "line2":  "Remote - Earth - Probably drinking coffee"
                }
 }
