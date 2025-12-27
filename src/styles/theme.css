@@ -1,0 +1,43 @@
+/* Design system: clean instrument UI (dark-first) */
+
+:root {
+  /* Default: dark (per requirement) */
+  color-scheme: dark;
+
+  --canvas: 6 10 16;      /* deep ink, not pure black */
+  --surface: 10 16 24;    /* card surface */
+  --surface-2: 14 22 34;  /* elevated surface */
+  --ink: 226 232 240;     /* off-white (avoid pure white) */
+  --muted: 175 188 206;   /* readable secondary */
+  --hairline: 42 56 80;   /* borders (slightly brighter) */
+
+  --accent: 45 212 191;    /* teal/emerald (slightly desaturated) */
+  --accent-ink: 153 246 228;
+
+  /* Shadows in dark UI should be subtle; rely on borders + inner highlight */
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px rgb(0 0 0 / 0.35);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  --content: 760px;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --canvas: 252 252 249;  /* warm off-white */
+  --surface: 255 255 255;
+  --surface-2: 248 250 252;
+  --ink: 12 18 28;
+  --muted: 72 86 104;
+  --hairline: 203 213 225;
+
+  --accent: 12 148 132;
+  --accent-ink: 8 91 84;
+
+  --shadow: 0 1px 2px rgb(15 23 42 / 0.06), 0 10px 28px rgb(15 23 42 / 0.08);
+}
+
+

@@ -28,13 +28,22 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare site artifact
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Prepare Pages artifact
         run: |
-          mkdir -p dist/src/content
-          cp index.html styles.css print.css script.js dist/
-          cp src/content/resume.json dist/src/content/resume.json
-          cp .nojekyll dist/.nojekyll
           cp CNAME dist/CNAME
+          cp .nojekyll dist/.nojekyll || true
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

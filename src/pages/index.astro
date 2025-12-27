@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopBar from '../components/TopBar.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { loadResume } from '../lib/content';
+
+const resume = await loadResume();
+const canonical = 'https://121watts.com';
+---
+
+<BaseLayout title={resume.meta.siteTitle} description={resume.meta.description} canonical={canonical}>
+  <TopBar meta={resume.meta} a11y={resume.a11y} contact={resume.contact} />
+
+  <main id="main">
+    <Hero meta={resume.meta} hero={resume.hero} />
+    <Experience title={resume.sections.experience.title} kicker={resume.sections.experience.kicker} items={resume.experience} />
+    <Contact
+      title={resume.sections.contact.title}
+      kicker={resume.sections.contact.kicker}
+      note={resume.contactSection?.note}
+      contact={resume.contact}
+    />
+    <Footer line1={resume.footer.line1} line2={resume.footer.line2} />
+  </main>
+
+  <script>
+    (() => {
+      // Copy-to-clipboard (used by the email icon button)
+      const copyBtn = document.querySelector('[data-copy]');
+      async function copyText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', 'true');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            const ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            return ok;
+          } catch {
+            document.body.removeChild(ta);
+            return false;
+          }
+        }
+      }
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          const value = copyBtn.getAttribute('data-copy-value') || '';
+          if (!value) return;
+          const ok = await copyText(value);
+          if (ok) {
+            copyBtn.setAttribute('data-copied', 'true');
+            copyBtn.setAttribute('title', 'Copied');
+            window.setTimeout(() => {
+              copyBtn.removeAttribute('data-copied');
+              copyBtn.setAttribute('title', 'Copy');
+            }, 900);
+          } else {
+            copyBtn.setAttribute('title', 'Copy failed');
+            window.setTimeout(() => copyBtn.setAttribute('title', 'Copy'), 1200);
+          }
+        });
+      }
+
+      const toggle = document.querySelector('[data-theme-toggle]');
+      function getTheme() {
+        return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+      }
+      function setTheme(next) {
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch {}
+        if (toggle) {
+          toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+      }
+      if (toggle) {
+        // Ensure aria-label is correct on load (default is dark)
+        setTheme(getTheme());
+        toggle.addEventListener('click', () => {
+          // Enable a short transition only for user-initiated toggles (avoid first-load jank)
+          document.documentElement.classList.add('theme-transition');
+          setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+          window.setTimeout(() => {
+            document.documentElement.classList.remove('theme-transition');
+          }, 260);
+        });
+      }
+    })();
+  </script>
+</BaseLayout>

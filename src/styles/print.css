@@ -1,0 +1,32 @@
+@media print {
+  :root {
+    --canvas: 255 255 255;
+    --ink: 0 0 0;
+    --muted: 60 60 60;
+    --hairline: 210 210 210;
+    --surface: 255 255 255;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Hide sticky chrome */
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 9pt;
+    color: #444;
+  }
+}
+
+
